@@ -205,6 +205,9 @@
     gap: 16px; margin-top: 48px;
   }
   .framework-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background: var(--cream);
     border: 2px solid var(--tan);
     border-radius: var(--radius);
@@ -421,7 +424,17 @@
     height: 40px;
     width: auto;
   }
-  .footer-brand h3 span { color: var(--accent); }
+  .footer-brand h3 .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 30px;
+    letter-spacing: -0.3px;
+    display: flex;
+    gap: 2px;
+    line-height: 1;
+  }
+  .footer-brand h3 .logo-h { color: #e74c3c; }
+  .footer-brand h3 .logo-p { color: #f1c40f; }
+  .footer-brand h3 .logo-f { color: #3498db; }
   .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 260px; }
   .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--cream); margin-bottom: 16px; }
   .footer-col a {
@@ -456,4 +469,125 @@
     .pricing-card.featured { transform: none; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
     .hero-stats { gap: 28px; }
+  }
+
+  /* SIMPLE DOMAIN PAGES */
+  .domain-simple-page {
+    background:
+      radial-gradient(circle at 12% 0%, rgba(255, 209, 153, 0.25) 0%, rgba(255, 255, 255, 0) 34%),
+      radial-gradient(circle at 88% 100%, rgba(134, 190, 255, 0.2) 0%, rgba(255, 255, 255, 0) 42%),
+      #f9fbff;
+    min-height: 100vh;
+  }
+  .domain-page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 136px 24px 56px;
+  }
+  .domain-hero-card {
+    border: 1px solid rgba(44, 62, 80, 0.12);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 22px;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.94), rgba(247, 251, 255, 0.96));
+    box-shadow: 0 18px 46px rgba(22, 37, 58, 0.08);
+  }
+  .domain-kicker {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2e6f95;
+    margin-bottom: 12px;
+  }
+  .domain-title {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.8px;
+    color: #14243b;
+    margin-bottom: 8px;
+  }
+  .domain-acronym {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #2e6f95;
+    margin-bottom: 8px;
+  }
+  .domain-lead {
+    font-size: 16px;
+    color: #3e5266;
+    max-width: 620px;
+    line-height: 1.7;
+  }
+  .domain-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .domain-panel {
+    border-radius: 18px;
+    border: 1px solid rgba(44, 62, 80, 0.12);
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 14px 32px rgba(34, 48, 73, 0.06);
+  }
+  .domain-panel h2 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #14243b;
+  }
+  .domain-panel p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3c4c5d;
+  }
+  .domain-chip-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2px;
+  }
+  .domain-chip {
+    padding: 9px 13px;
+    border-radius: 100px;
+    border: 1px solid rgba(34, 107, 141, 0.25);
+    background: #edf7ff;
+    color: #174362;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .domain-footer-link {
+    display: inline-block;
+    margin-top: 26px;
+    text-decoration: none;
+    color: #123a57;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(18, 58, 87, 0.45);
+    padding-bottom: 2px;
+  }
+
+  .tone-observing .domain-hero-card { border-top: 5px solid #2ecc71; }
+  .tone-understanding .domain-hero-card { border-top: 5px solid #27ae60; }
+  .tone-thinking .domain-hero-card { border-top: 5px solid #f1c40f; }
+  .tone-deciding .domain-hero-card { border-top: 5px solid #f39c12; }
+  .tone-performing .domain-hero-card { border-top: 5px solid #e74c3c; }
+  .tone-experiencing .domain-hero-card { border-top: 5px solid #8e44ad; }
+  .tone-repeating .domain-hero-card { border-top: 5px solid #3b5998; }
+
+  @media (max-width: 860px) {
+    .domain-page {
+      padding: 112px 18px 44px;
+    }
+    .domain-content-grid {
+      grid-template-columns: 1fr;
+    }
+    .domain-panel h2 {
+      font-size: 24px;
+    }
   }
